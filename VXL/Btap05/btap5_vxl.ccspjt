@@ -1,0 +1,19 @@
+[PROJECT]
+Target=btap5_vxl.hex
+Processor_Text=PIC16F887
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=btap5_vxl.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[btap5_vxl.c]
+Type=4
+[mru-list]
+1=btap5_vxl.c
+[Opened Files]
+1=..\Baitap06\codemohinhdengiaothong.c
+2=
+[Units]
+Count=1
+1=btap5_vxl (main)

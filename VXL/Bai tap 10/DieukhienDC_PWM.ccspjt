@@ -1,0 +1,19 @@
+[PROJECT]
+Target=DieukhienDC_PWM.hex
+Processor_Text=PIC16F887
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=DieukhienDC_PWM.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[DieukhienDC_PWM.c]
+Type=4
+[mru-list]
+1=DieukhienDC_PWM.c
+[Opened Files]
+1=..\Bai tap 11\Ngat timer hien thi nhiet do.c
+2=
+[Units]
+Count=1
+1=DieukhienDC_PWM (main)

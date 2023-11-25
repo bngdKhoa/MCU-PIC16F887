@@ -1,0 +1,18 @@
+*** Error 18 "Demsanphamdungtimer.c" Line 1(10,23): File can not be opened
+    Not in "C:\Program Files (x86)\PICC\devices\ 16F887.H "
+    Not in "C:\Program Files (x86)\PICC\drivers\ 16F887.H "
+    Not in local " 16F887.H "
+    Not in local "D:\Set up\VXL\Baitap08\ 16F887.H "
+    Not in last " 16F887.H "
+    Not in project "D:\Set up\VXL\Baitap08\ 16F887.H "
+*** Error 128 "Demsanphamdungtimer.c" Line 2(8,12): A #DEVICE required before this line
+*** Error 18 "Demsanphamdungtimer.c" Line 12(11,20): File can not be opened
+    Not in "C:\Program Files (x86)\PICC\devices\ LCD.C "
+    Not in "C:\Program Files (x86)\PICC\drivers\ LCD.C "
+    Not in local " LCD.C "
+    Not in local "D:\Set up\VXL\Baitap08\ LCD.C "
+    Not in last " LCD.C "
+    Not in project "D:\Set up\VXL\Baitap08\ LCD.C "
+*** Error 128 "Demsanphamdungtimer.c" Line 14(10,17): A #DEVICE required before this line
+      4 Errors,  0 Warnings.
+Build Failed.

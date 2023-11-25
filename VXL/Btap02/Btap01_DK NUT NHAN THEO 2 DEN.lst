@@ -1,0 +1,180 @@
+CCS PCM C Compiler, Version 5.015, 5967               25-Nov-23 10:55
+
+               Filename:   D:\Set up\VXL\Btap02\Btap01_DK NUT NHAN THEO 2 DEN.lst
+
+               ROM used:   110 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   6 (2%) at main() level
+                           6 (2%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   018
+0003:  NOP
+.................... #INCLUDE <16F887.H> 
+.................... //////////// Standard Header file for the PIC16F887 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F887 
+....................  
+.................... #list 
+....................  
+.................... #FUSES HS 
+.................... #USE DELAY (CLOCK = 20M) 
+0004:  MOVLW  21
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   017
+000A:  MOVLW  06
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  7B
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  DECFSZ 00,F
+0016:  GOTO   00A
+0017:  RETURN
+.................... #DEFINE ON_OFF1 PIN_B6  
+.................... #DEFINE ON_OFF2 PIN_B7 
+.................... #DEFINE LED1    PIN_B0 
+.................... #DEFINE LED2    PIN_B1 
+....................  
+.................... VOID MAIN () 
+0018:  MOVF   03,W
+0019:  ANDLW  1F
+001A:  MOVWF  03
+001B:  BSF    03.5
+001C:  BSF    03.6
+001D:  MOVF   09,W
+001E:  ANDLW  C0
+001F:  MOVWF  09
+0020:  BCF    03.6
+0021:  BCF    1F.4
+0022:  BCF    1F.5
+0023:  MOVLW  00
+0024:  BSF    03.6
+0025:  MOVWF  08
+0026:  BCF    03.5
+0027:  CLRF   07
+0028:  CLRF   08
+0029:  CLRF   09
+002A:  BCF    03.7
+.................... { 
+....................    SET_TRIS_B (0XFC); 
+002B:  MOVLW  FC
+002C:  BSF    03.5
+002D:  BCF    03.6
+002E:  MOVWF  06
+....................    PORT_B_PULLUPS (0XFC); 
+002F:  MOVWF  15
+0030:  BCF    01.7
+....................    OUTPUT_LOW (LED1); 
+0031:  BCF    06.0
+0032:  BCF    03.5
+0033:  BCF    06.0
+....................    OUTPUT_LOW (LED2); 
+0034:  BSF    03.5
+0035:  BCF    06.1
+0036:  BCF    03.5
+0037:  BCF    06.1
+....................     
+.................... KTR: 
+....................    IF (INPUT(ON_OFF1)==0) 
+0038:  BSF    03.5
+0039:  BSF    06.6
+003A:  BCF    03.5
+003B:  BTFSC  06.6
+003C:  GOTO   053
+....................    { 
+....................       DELAY_MS (10); 
+003D:  MOVLW  0A
+003E:  MOVWF  21
+003F:  CALL   004
+....................       IF (INPUT (ON_OFF1)== 0) 
+0040:  BSF    03.5
+0041:  BSF    06.6
+0042:  BCF    03.5
+0043:  BTFSC  06.6
+0044:  GOTO   052
+....................       {  WHILE(INPUT (ON_OFF1)==0) 
+0045:  BSF    03.5
+0046:  BSF    06.6
+0047:  BCF    03.5
+0048:  BTFSC  06.6
+0049:  GOTO   04D
+....................          IF (INPUT_STATE (LED2)==0){}    
+004A:  BTFSC  06.1
+004B:  GOTO   04C
+004C:  GOTO   045
+....................          { 
+....................             OUTPUT_TOGGLE (LED1); 
+004D:  BSF    03.5
+004E:  BCF    06.0
+004F:  MOVLW  01
+0050:  BCF    03.5
+0051:  XORWF  06,F
+....................          } 
+....................       } 
+....................    } 
+0052:  GOTO   06C
+....................    ELSE IF (INPUT(ON_OFF2)==0) 
+0053:  BSF    03.5
+0054:  BSF    06.7
+0055:  BCF    03.5
+0056:  BTFSC  06.7
+0057:  GOTO   06C
+....................    { 
+....................       DELAY_MS(5); 
+0058:  MOVLW  05
+0059:  MOVWF  21
+005A:  CALL   004
+....................       IF (INPUT(ON_OFF2)== 0) 
+005B:  BSF    03.5
+005C:  BSF    06.7
+005D:  BCF    03.5
+005E:  BTFSC  06.7
+005F:  GOTO   06C
+....................       {  WHILE (INPUT(ON_OFF2)==0){} 
+0060:  BSF    03.5
+0061:  BSF    06.7
+0062:  BCF    03.5
+0063:  BTFSS  06.7
+0064:  GOTO   060
+....................          IF (INPUT_STATE (LED1)==1) 
+0065:  BTFSS  06.0
+0066:  GOTO   06C
+....................          { 
+....................             OUTPUT_TOGGLE (LED2); 
+0067:  BSF    03.5
+0068:  BCF    06.1
+0069:  MOVLW  02
+006A:  BCF    03.5
+006B:  XORWF  06,F
+....................          } 
+....................       } 
+....................    } 
+....................    GOTO KTR; 
+006C:  GOTO   038
+.................... } 
+006D:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2FE2   HS NOWDT PUT MCLR NOPROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   BORV40 NOWRT

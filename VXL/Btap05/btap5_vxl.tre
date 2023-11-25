@@ -1,0 +1,24 @@
+ÀÄbtap5_vxl
+   ÀÄMAIN  0/68  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄhienthimssv  0/66  Ram=9
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄdemgiay  0/33  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÀÄhienthi  0/49  Ram=1
+      ³     ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄdemlenxuongdongthoi  0/72  Ram=3
+      ³  ÃÄ@DIVS88  0/37  Ram=4
+      ³  ÃÄ@DIVS88  0/37  Ram=4
+      ³  ÃÄ@DIVS88  0/37  Ram=4
+      ³  ÃÄ@DIVS88  0/37  Ram=4
+      ³  ÀÄhienthi  0/49  Ram=1
+      ³     ÀÄ*
+      ÃÄchaychu_hello  0/69  Ram=24
+      ³  ÀÄhienthi  0/49  Ram=1
+      ³     ÀÄ*
+      ÀÄchaychu_cocacola  0/53  Ram=3
+         ÃÄ@const649  0/12  Ram=0
+         ÀÄhienthi  0/49  Ram=1
+            ÀÄ*

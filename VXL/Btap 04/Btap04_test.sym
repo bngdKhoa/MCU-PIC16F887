@@ -1,0 +1,71 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     DEM
+021     I
+022     SO
+023     @TRIS_C
+024     GIAIMA7DOAN.SO
+024     @delay_ms1.P1
+024     MAIN.@SCRATCH1
+025     @DIV88.P1
+025     GIAIMA7DOAN.@SCRATCH1
+026     @DIV88.P1
+027     @DIV88.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  MA7DOAN.call
+000008  MA7DOAN.data
+000012  @DIV88
+000027  GIAIMA7DOAN
+000044  @delay_ms1
+000058  MAIN
+000058  @cinit1
+00006C  @cinit2
+007D  GM
+
+Project Directory:
+    D:\Set up\VXL\Btap 04\
+
+Project Files:
+    Btap04_test.c                                           [27-Sep-23 10:22  CRC=D2FD120F]
+    C:\Program Files (x86)\PICC\devices\16F887.H            [12-Nov-13 14:35  CRC=6CB1A611]
+
+Source signature=AC605E31
+
+Units:
+    Btap04_test (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   Btap04_test.xsym
+    Errors:      Btap04_test.err
+    Ext Symbols: Btap04_test.esym
+    INHX8:       Btap04_test.hex
+    Symbols:     Btap04_test.sym
+    List:        Btap04_test.lst
+    Debug/COFF:  Btap04_test.cof
+    Project:     Btap04_test.ccspjt
+    Call Tree:   Btap04_test.tre
+    Statistics:  Btap04_test.STA

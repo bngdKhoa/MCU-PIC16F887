@@ -1,0 +1,104 @@
+# INCLUDE <16F887.H> 
+# FUSES HS 
+# USE DELAY (CLOCK = 20M)
+
+UNSIGNED INT8 DLHT [] = {0xFF, 0XFF, 0xBF, 0xBF, 0xBF, 0xBF, 0XFF, 0xFF};
+CONST UNSIGNED INT8 MA7DOAN [] = {0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xF8, 0x80, 0X90};
+
+UNSIGNED INT8 I, Q, M, N, K, GIAY, QUET;
+SIGNED INT8 DEM1, DEM2;
+
+VOID HIENTHI ()
+{
+   FOR (Q=0;Q<44;Q++)
+   {
+      QUET = 0xFE;
+      FOR (I=0; I<8; I++)
+      {
+         OUTPUT_D (QUET);
+         OUTPUT_C (DLHT[I]);
+         DELAY_MS (2);
+         OUTPUT_C (0xFF);
+         QUET = (QUET << 1) + 1;
+      }
+   }
+} 
+VOID HIENTHI_MSSV ()
+{
+   CONST UNSIGNED INT8 MSSV [] = {0xA4, 0xF9, 0xF9, 0x92, 0xF9, 0x99, 0xC0, 0x80};
+   FOR (K=0; K<100; K++)
+   {
+         OUTPUT_D (QUET);
+         OUTPUT_C (MSSV[I]);
+         DELAY_MS (2);
+         OUTPUT_C (0xFF);
+         QUET = (QUET << 1) + 1;
+   }
+}
+VOID DEMGIAY ()
+{
+   FOR (GIAY=0; GIAY < 60; GIAY++)
+   {
+      DLHT [7] = MA7DOAN [GIAY % 10];
+      DLHT [6] = MA7DOAN [GIAY/10];
+      HIENTHI ();
+   }
+}
+VOID DEMLENXUONGDONGTHOI ()
+{
+   DEM1 = 00;
+   DEM2 = 26;
+   FOR (N=0; N<25; N++)
+   {
+      DLHT [0] = MA7DOAN [DEM2 / 10];
+      DLHT [1] = MA7DOAN [DEM2 % 10];
+      DLHT [6] = MA7DOAN [DEM1 / 10];
+      DLHT [7] = MA7DOAN [DEM1 % 10];
+      HIENTHI ();
+      DEM1 = DEM1 + 1;
+      IF (DEM1 > 15)
+         DEM1 = 0;
+      DEM2 = DEM2 - 2;
+      IF (DEM2 < 0)
+         DEM2 = 26;
+   }
+}
+VOID CHAYCHU_HELLO ()
+{
+   CONST UNSIGNED INT8 HELLO [] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x89, 0x86, 0xC7, 0xC7, 0xC0, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+   FOR (M=0; M<14; M++)
+   {
+      FOR (N=0; N<8; N++)
+         DLHT [N] = HELLO [N+M];
+      HIENTHI ();
+   }
+}
+VOID CHAYCHU_COCACOLA ()
+{
+   CONST UNSIGNED INT8 COCACOLA [] = {0xC0, 0xC6, 0xC0, 0x88, 0xC6, 0xC0, 0xC7, 0X88};
+   FOR (N=0; N<16; N++)
+   {
+      FOR (K=0; K<7; K++)
+         DLHT [K] = DLHT [K+1];
+      IF (N < 8)
+         DLHT [7] = COCACOLA [N];
+      ELSE 
+         DLHT [7] = 0xFF;
+      HIENTHI ();
+   }
+}
+VOID MAIN ()
+{
+   SET_TRIS_D (0);
+   SET_TRIS_C (0);
+   WHILE (TRUE)
+   {
+      HIENTHI_MSSV ();
+      DEMGIAY ();
+      DEMLENXUONGDONGTHOI ();
+      CHAYCHU_HELLO ();
+      CHAYCHU_COCACOLA ();
+   }
+}
+         
+   

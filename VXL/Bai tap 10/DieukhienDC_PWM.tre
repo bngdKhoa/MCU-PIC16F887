@@ -1,0 +1,21 @@
+ÀÄDieukhienDC_PWM
+   ÀÄMAIN  0/131  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄHIENTHI_MA7DOAN_THEOCAPDO  0/44  Ram=3
+      ³  ÃÄ@DIV1616  0/37  Ram=5
+      ³  ÃÄ@const620  0/14  Ram=0
+      ³  ÃÄ@DIV1616  0/37  Ram=5
+      ³  ÀÄ@const620  0/14  Ram=0
+      ÃÄKT_UP  0/35  Ram=1
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÀÄHIENTHI_MA7DOAN_THEOCAPDO  0/44  Ram=3
+      ³     ÀÄ*
+      ÃÄKT_DW  0/33  Ram=1
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÀÄHIENTHI_MA7DOAN_THEOCAPDO  0/44  Ram=3
+      ³     ÀÄ*
+      ÃÄKT_START_STOP  0/29  Ram=1
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÀÄHIENTHI_MA7DOAN_THEOCAPDO  0/44  Ram=3
+      ³     ÀÄ*
+      ÀÄ@MUL1616  0/23  Ram=5

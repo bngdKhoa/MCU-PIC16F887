@@ -1,0 +1,23 @@
+[PROJECT]
+Target=demgiophutgiay.hex
+Processor_Text=PIC16F877
+CCSVerions=5.015
+Compiler=PCM
+CCSVersion=5.015
+[Target Data]
+FileList=demgiophutgiay.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[D:\Set up\VXL\Btap05\demgiophutgiay]
+Type=4
+[mru-list]
+1=demgiophutgiay.c
+[Opened Files]
+1=demgiophutgiay.c
+2=C:\Program Files (x86)\PICC\devices\16F887.H
+3=
+[demgiophutgiay.c]
+Type=4
+[Units]
+Count=1
+1=demgiophutgiay (main)

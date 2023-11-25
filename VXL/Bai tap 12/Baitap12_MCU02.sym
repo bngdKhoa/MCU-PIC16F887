@@ -1,0 +1,159 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     @INTERRUPT_AREA
+02C     ND1
+02D-02E ND2
+02F     TAM
+030     lcd_init.i
+030-033 @SFTOI.P1
+030     MAIN.@SCRATCH1
+031-034 lcd_init.LCD_INIT_STRING
+031     MAIN.@SCRATCH2
+032-035 @DIVFF.P1
+032-033 @ITOF.P2
+035     lcd_init.@SCRATCH1
+036-039 @DIVFF.P1
+03A     @DIVFF.@SCRATCH1
+03B     @DIVFF.@SCRATCH2
+03C     @DIVFF.@SCRATCH3
+03D     @DIVFF.@SCRATCH4
+03E     @DIVFF.@SCRATCH5
+03F     @DIVFF.@SCRATCH6
+040     @PRINTF_U_647.P1
+040     @PSTRINGCN7_647.P2
+041     @PRINTF_U_647.P1
+041     @PSTRINGCN7_647.@SCRATCH1
+042     @DIV88.P1
+042     @PSTRINGCN7_647.@SCRATCH2
+043     @DIV88.P1
+043     @PSTRINGCN7_647.@SCRATCH3
+044     lcd_putc.c
+044     @PSTRINGCN7_647.@SCRATCH4
+044     @DIV88.@SCRATCH1
+045     @delay_ms1.P1
+045     lcd_gotoxy.x
+046     lcd_gotoxy.y
+047     lcd_gotoxy.address
+048     lcd_gotoxy.@SCRATCH1
+049     lcd_send_byte.address
+04A     lcd_send_byte.n
+04B     lcd_read_byte.low
+04B     lcd_send_byte.@SCRATCH1
+04C     lcd_send_nibble.n
+04C     lcd_read_byte.high
+04D     lcd_read_nibble.n
+04D     lcd_read_byte.@SCRATCH1
+04E     lcd_read_nibble.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+0FF     @INTERRUPT_AREA
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+000051  lcd_send_nibble
+000081  lcd_send_byte
+000089  lcd_read_byte
+0000D5  lcd_read_nibble
+00013D  lcd_gotoxy
+00014F  @delay_ms1
+000163  lcd_putc
+00018F  RECIEVE_DATA
+00026A  @const663.call
+000271  @const682.call
+000278  lcd_init
+0002E2  @ITOF
+000301  @DIVFF
+0003CD  @SFTOI
+0003EE  @cinit1
+0003EE  MAIN
+00040D  @cinit2
+000492  @PSTRINGCN7_647
+0004EC  @PRINTF_U_647
+00051D  @DIV88
+
+Project Directory:
+    D:\Set up\VXL\Bai tap 12\
+
+Project Files:
+    Baitap12_MCU02.c                                        [15-Nov-23 11:05  CRC=35B11474]
+    C:\Program Files (x86)\PICC\devices\16F887.H            [12-Nov-13 14:35  CRC=6CB1A611]
+    C:\Program Files (x86)\PICC\drivers\LCD.C               [19-Sep-13 15:38  CRC=D1A6378A]
+
+Source signature=45AF2999
+
+Units:
+    Baitap12_MCU02 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   Baitap12_MCU02.xsym
+    Errors:      Baitap12_MCU02.err
+    Ext Symbols: Baitap12_MCU02.esym
+    INHX8:       Baitap12_MCU02.hex
+    Symbols:     Baitap12_MCU02.sym
+    List:        Baitap12_MCU02.lst
+    Debug/COFF:  Baitap12_MCU02.cof
+    Project:     Baitap12_MCU02.ccspjt
+    Call Tree:   Baitap12_MCU02.tre
+    Statistics:  Baitap12_MCU02.STA

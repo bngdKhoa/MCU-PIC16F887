@@ -1,0 +1,92 @@
+# INCLUDE <16F887.H>
+# FUSES HS 
+# USE DELAY (CLOCK = 20M)
+# DEFINE UP         PIN_B0
+# DEFINE DW         PIN_B1
+# DEFINE START_STOP PIN_B2
+# DEFINE ENABLE_PIN_C7    // CHO PHEP L298N
+CONST UNSIGNED INT8 MA7DOAN [] = {0XC0, 0XF9, 0XA4, 0XB0, 0X99, 0X92, 0X82, 0XF8, 0X80, 0X90}; 
+UNSIGNED INT16 VALUE, CAPTOCDO;
+INT1 TTDC;  // TRANG THAI DC: TTDC = 0 -> DC DUNG; TTDC = 1 -> DC CHAY
+SIGNED INT8 DEM; 
+
+VOID HIENTHI_MA7DOAN ()
+{
+   OUTPUT_B (MA7DOAN [DEM/10]);
+   OUTPUT_D (MA7DOAN [DEM%10]);
+}
+   
+VOID KT_START_STOP ()
+{
+   IF (INPUT(START_STOP) == 0)
+   {
+      DELAY_MS (20);
+      IF (INPUT (START_STOP) == 0)
+      {
+         WHILE (INPUT (START_STOP) == 0) {}
+         TTDC =~ TTDC;
+         IF (TTDC == 1)
+            CAPTOCDO = 1;
+         ELSE
+            CAPTOCDO = 0;
+      }
+   }
+}
+VOID KT_UP ()
+{
+   IF (INPUT (UP) == 0)
+   {
+      DELAY_MS (20);
+      IF (INPUT (UP) == 0)
+      {
+         WHILE (INPUT (UP) == 0) {}
+         CAPTOCDO ++;
+         IF (CAPTOCDO > 10)
+            CAPTOCDO = 10;
+      }
+   }
+}
+VOID KT_DW ()
+{
+   IF (INPUT (DW) == 0)
+   {
+      DELAY_MS (20);
+      IF (INPUT (DW) == 0)
+      {
+         WHILE (INPUT (DW) == 0) {}
+         CAPTOCDO --;
+         IF (CAPTOCDO < 1)
+            CAPTOCDO = 1;
+      }
+   }
+}
+
+VOID MAIN ()
+{
+   SET_TRIS_D (0);
+   SET_TRIS_B (0);
+   SET_TRIS_C (0);
+   SET_TRIS_A (0XFF);
+   OUTPUT_LOW (PIN_C3); // CHO PHEP DONG CO CHAY THUAN 
+   SETUP_CCP1 (CCP_PWM);// CAU HINH CHAN CCP1 LA CHAN OUT PWM
+   SETUP_TIMER_2 (T2_DIV_BY_16, 249, 1);  // THIET LAP CHU KY PWM 
+   SET_TIMER2 (0);
+   OUTPUT_HIGH (ENABLE);   // CHO PHEP L298N 
+   VALUE = 0;
+   TTDC = 0;
+   CAPTOCDO = 0;
+   SET_PWM1_DUTY (VALUE);
+   WHILE (TRUE)
+   {
+      IF (TTDC == 1)
+      {
+         KT_UP ();
+         KT_DW ();
+         HIENTHI_MA7DOAN ();
+      }
+      KT_START_STOP ();
+      VALUE = CAPTOCDO * 100;
+      SET_PWM1_DUTY (VALUE);
+   }
+}
+   

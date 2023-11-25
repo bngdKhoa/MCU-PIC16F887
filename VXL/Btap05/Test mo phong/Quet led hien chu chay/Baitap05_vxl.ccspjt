@@ -1,0 +1,23 @@
+[PROJECT]
+Target=Baitap05_vxl.hex
+Processor_Text=PIC16F887
+CCSVerions=5.015
+Compiler=PCM
+CCSVersion=5.015
+[Target Data]
+FileList=Baitap05_vxl.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[D:\Set up\VXL\Btap05\Baitap05_vxl]
+Type=4
+[mru-list]
+1=Baitap05_vxl.c
+[Opened Files]
+1=btap5_vxl.c
+2=
+3=
+[Baitap05_vxl.c]
+Type=4
+[Units]
+Count=1
+1=Baitap05_vxl (main)

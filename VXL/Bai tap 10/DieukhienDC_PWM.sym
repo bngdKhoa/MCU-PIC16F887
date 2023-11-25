@@ -1,0 +1,81 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-021 value
+022-023 CAPTOCDO
+024.0   TTDC
+025     @TRIS_C
+026-027 @DIV1616.P1
+026     @delay_ms1.P2
+026-027 @MUL1616.P3
+026     HIENTHI_MA7DOAN_THEOCAPDO.@SCRATCH1
+026     KT_START_STOP.@SCRATCH1
+026     KT_UP.@SCRATCH1
+026     KT_DW.@SCRATCH1
+026     MAIN.@SCRATCH1
+027     HIENTHI_MA7DOAN_THEOCAPDO.@SCRATCH2
+028-029 @DIV1616.P1
+028-029 @MUL1616.P2
+028     HIENTHI_MA7DOAN_THEOCAPDO.@SCRATCH3
+02A     @DIV1616.@SCRATCH1
+02A     @MUL1616.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  MA7DOAN.call
+000008  MA7DOAN.data
+000012  @DIV1616
+000037  HIENTHI_MA7DOAN_THEOCAPDO
+000063  @delay_ms1
+000077  KT_UP
+00009A  KT_DW
+0000BB  KT_START_STOP
+0000D8  @MUL1616
+0000EF  MAIN
+0000EF  @cinit1
+000103  @cinit2
+
+Project Directory:
+    D:\Set up\VXL\Bai tap 10\
+
+Project Files:
+    DieukhienDC_PWM.c                                       [08-Nov-23 11:40  CRC=5DD081CB]
+    C:\Program Files (x86)\PICC\devices\16F887.H            [12-Nov-13 14:35  CRC=6CB1A611]
+
+Source signature=3733CDED
+
+Units:
+    DieukhienDC_PWM (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   DieukhienDC_PWM.xsym
+    Errors:      DieukhienDC_PWM.err
+    Ext Symbols: DieukhienDC_PWM.esym
+    INHX8:       DieukhienDC_PWM.hex
+    Symbols:     DieukhienDC_PWM.sym
+    List:        DieukhienDC_PWM.lst
+    Debug/COFF:  DieukhienDC_PWM.cof
+    Project:     DieukhienDC_PWM.ccspjt
+    Call Tree:   DieukhienDC_PWM.tre
+    Statistics:  DieukhienDC_PWM.STA

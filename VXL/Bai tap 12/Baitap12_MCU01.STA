@@ -1,0 +1,54 @@
+
+ROM used:   520/8192 (6%)
+            520/8192 (6%) including unused fragments
+
+            0.6 Average locations per line
+            32.5 Average locations per statement
+
+RAM used:   10/368 (3%) at main() level
+            24/368 (7%) worst case
+
+Stack used: 2 worst case (2 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   38    16 100  Baitap12_MCU01.c
+  768     0   0  C:\Program Files (x86)\PICC\devices\16F887.H
+----- -----
+  806    16 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     20   4    1             @delay_ms1
+0     14   3    0   760  4.5  @const623
+0     46   9    3    72  2.4  HIENTHI_LED7DOAN
+0     37   7    5   399  2.4  @DIV1616
+0    131  25    2   300  3.1  MAIN
+0     31   6    2   852  6.2  @ITOF
+0    204  39   14   208  6.3  @DIVFF
+0     33   6    4   354  4.7  @SFTOI
+ Inline         0   236  3.5  @cinit1
+
+Program metrics:
+    Functions               8
+    Statements              16
+    Comments                132
+    Volume (V)              4777
+    Difficulty (D)          32.8
+    Effort to implement (E) 156475
+    Time to implement (T)   2 hours, 25 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   8
+    Maintainability (MI)    127
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   516  1528  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

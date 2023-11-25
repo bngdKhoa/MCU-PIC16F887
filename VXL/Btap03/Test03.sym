@@ -1,0 +1,87 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     YC
+021     YD
+022-023 Y
+024-025 I
+026-027 K
+028-029 RUN
+02A-02B SAVE
+02C     @TRIS_C
+02D     @delay_ms1.P1
+02D     SANGNGOAIVAO.@SCRATCH1
+02D     SANGGIUARA.@SCRATCH1
+02D     SANGDANTRAI.@SCRATCH1
+02D     SANGDANPHAI.@SCRATCH1
+02D     TATDANTRAI.@SCRATCH1
+02D     TATDANPHAI.@SCRATCH1
+02E     SANGDANTRAI.@SCRATCH2
+02E     SANGDANPHAI.@SCRATCH2
+02E     TATDANTRAI.@SCRATCH2
+02E     TATDANPHAI.@SCRATCH2
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  XUAT_16LED
+000015  @delay_ms1
+000029  SANGDON
+000061  TATDON
+0000AC  SANGNGOAIVAO
+0000D3  TATNGOAIVAO
+0000F9  TATGIUARA
+00011F  SANGGIUARA
+000148  XENKE
+000166  SANGDANTRAI
+000194  TATDANTRAI
+0001B7  SANGDANPHAI
+0001E2  TATDANPHAI
+000205  CHOPTAT
+00021D  @cinit1
+00021D  MAIN
+000231  @cinit2
+
+Project Directory:
+    D:\Set up\VXL\Btap03\
+
+Project Files:
+    Test03.c                                                [25-Nov-23 11:04  CRC=E0A8A231]
+    C:\Program Files (x86)\PICC\devices\16F887.H            [12-Nov-13 14:35  CRC=6CB1A611]
+
+Source signature=BA0BEE53
+
+Units:
+    Test03 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   Test03.xsym
+    Errors:      Test03.err
+    Ext Symbols: Test03.esym
+    INHX8:       Test03.hex
+    Symbols:     Test03.sym
+    List:        Test03.lst
+    Debug/COFF:  Test03.cof
+    Project:     Test03.ccspjt
+    Call Tree:   Test03.tre
+    Statistics:  Test03.STA

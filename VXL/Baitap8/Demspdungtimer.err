@@ -1,0 +1,11 @@
+*** Error 18 "Demspdungtimer.c" Line 1(10,22): File can not be opened
+    Not in "C:\Program Files (x86)\PICC\devices\ 16F887.H "
+    Not in "C:\Program Files (x86)\PICC\drivers\ 16F887.H "
+    Not in local " 16F887.H "
+    Not in local "D:\Set up\VXL\Baitap8\ 16F887.H "
+    Not in last "C:\Program Files (x86)\PICC\drivers\ 16F887.H "
+    Not in project "D:\Set up\VXL\Baitap8\ 16F887.H "
+*** Error 128 "Demspdungtimer.c" Line 2(8,12): A #DEVICE required before this line
+*** Error 128 "C:\Program Files (x86)\PICC\drivers\LCD.C" Line 76(9,15): A #DEVICE required before this line
+      3 Errors,  0 Warnings.
+Build Failed.

@@ -1,0 +1,19 @@
+[PROJECT]
+Target=Btap01_DK NUT NHAN THEO 2 DEN.hex
+Processor_Text=PIC16F887
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Btap01_DK NUT NHAN THEO 2 DEN.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[Btap01_DK NUT NHAN THEO 2 DEN.c]
+Type=4
+[mru-list]
+1=Btap01_DK NUT NHAN THEO 2 DEN.c
+[Opened Files]
+1=Btap01_DK NUT NHAN THEO 2 DEN.c
+2=
+[Units]
+Count=1
+1=Btap01_DK NUT NHAN THEO 2 DEN (main)

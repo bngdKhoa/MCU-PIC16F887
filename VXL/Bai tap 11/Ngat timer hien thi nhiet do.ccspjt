@@ -1,0 +1,19 @@
+[PROJECT]
+Target=Ngat timer hien thi nhiet do.hex
+Processor_Text=PIC16F887
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Ngat timer hien thi nhiet do.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[Ngat timer hien thi nhiet do.c]
+Type=4
+[mru-list]
+1=Ngat timer hien thi nhiet do.c
+[Opened Files]
+1=..\Bai tap 12\Baitap12_VXL.c
+2=
+[Units]
+Count=1
+1=Ngat timer hien thi nhiet do (main)

@@ -1,0 +1,41 @@
+#include <Baitap05_vxl.h>
+unsigned int8 mssv [] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+unsigned int8 dlht [] = {0xA4, 0xF9, 0xF9, 0x92, 0xF9, 0x99, 0xC0, 0x80};
+//unsigned int8 ma7doan [] = {0xC0, 0xF9, 0XA4, 0XB0, 0X99, 0X92, 0X82, 0XF8, 0X80, 0X90};
+
+unsigned int8 i, j, n, solan, quet;
+void hienthi ()
+{
+   quet = 0xFE;
+   for (i=0; i<8; i++)
+   {
+      output_d (quet);
+      output_c (dlht[i]);
+      delay_ms (3);
+      output_c (0xFF);
+      quet = (quet << 1) + 1;
+   }
+}
+void hienthimssv ()
+{
+   for (i=0 ; i<8; i++)
+      dlht [i] = 0xFF;
+   for (j=0; j<7; j++)
+   {  
+      for (n=0; n<7; n++)
+         dlht [n] = dlht [n+1];
+      dlht [7] = mssv [n];
+      for (solan = 0; solan < 50; solan++)
+         hienthi ();
+   }
+}
+void main()
+{
+   set_tris_c (0);
+   set_tris_d (0);
+   while(TRUE)
+   {
+      hienthimssv();//TODO: User Code
+   }
+
+}

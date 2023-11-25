@@ -1,0 +1,101 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-027 dlht
+028-02F mssv
+030-039 ma7doan
+03A-04E hello
+04F-056 cocacola
+057     i
+058     j
+059     q
+05A     n
+05B     k
+05C     giay
+05D     solan
+05E     quet
+05F     dem1
+060     dem2
+061     @TRIS_C
+062     @DIVS88.P1
+062     @DIV88.P2
+062     @delay_ms1.P3
+062     hienthi.@SCRATCH1
+062     hienthimssv.@SCRATCH1
+062     demgiay.@SCRATCH1
+062     demlenxuongdongthoi.@SCRATCH1
+062     chaychu_hello.@SCRATCH1
+062     chaychu_cocacola.@SCRATCH1
+063     @DIVS88.P1
+063     @DIV88.P2
+063     hienthimssv.@SCRATCH2
+063     demlenxuongdongthoi.@SCRATCH2
+063     chaychu_hello.@SCRATCH2
+063     chaychu_cocacola.@SCRATCH2
+064     hienthimssv.@SCRATCH3
+064     @DIV88.@SCRATCH1
+064     @DIVS88.@SCRATCH1
+064     chaychu_hello.@SCRATCH3
+064     chaychu_cocacola.@SCRATCH3
+065     @DIVS88.@SCRATCH2
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  hienthi
+000024  @delay_ms1
+000047  hienthimssv
+00008A  @DIV88
+00009F  demgiay
+0000C7  @DIVS88
+0000EC  demlenxuongdongthoi
+000147  chaychu_hello
+000185  chaychu_cocacola
+0001C3  MAIN
+0001C3  @cinit1
+0001D7  @cinit2
+
+Project Directory:
+    D:\Set up\VXL\Btap05\
+
+Project Files:
+    Baitap05_vxl.c                                          [04-Oct-23 12:01  CRC=5A6F8B2F]
+    Baitap05_vxl.h                                          [03-Oct-23 21:46  CRC=64D0046D]
+    C:\Program Files (x86)\PICC\devices\16F887.h            [12-Nov-13 14:35  CRC=6CB1A611]
+
+Source signature=98A2DBBE
+
+Units:
+    Baitap05_vxl (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   Baitap05_vxl.xsym
+    Errors:      Baitap05_vxl.err
+    Ext Symbols: Baitap05_vxl.esym
+    INHX8:       Baitap05_vxl.hex
+    Symbols:     Baitap05_vxl.sym
+    List:        Baitap05_vxl.lst
+    Debug/COFF:  Baitap05_vxl.cof
+    Project:     Baitap05_vxl.ccspjt
+    Call Tree:   Baitap05_vxl.tre
+    Statistics:  Baitap05_vxl.STA

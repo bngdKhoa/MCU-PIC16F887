@@ -1,0 +1,20 @@
+[PROJECT]
+Target=Btap04_test.hex
+Processor_Text=PIC16F887
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Btap04_test.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[Btap04_test.c]
+Type=4
+[mru-list]
+1=Btap04_test.c
+[Opened Files]
+1=..\Btap05\Demphutgiay.c
+2=
+3=
+[Units]
+Count=1
+1=Btap04_test (main)

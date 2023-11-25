@@ -1,0 +1,51 @@
+
+ROM used:   222/8192 (3%)
+            222/8192 (3%) including unused fragments
+
+            0.3 Average locations per line
+            5.4 Average locations per statement
+
+RAM used:   10/368 (3%) at main() level
+            13/368 (4%) worst case
+
+Stack used: 2 worst case (2 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   61    41 100  Btap04_test.c
+  768     0   0  C:\Program Files (x86)\PICC\devices\16F887.H
+----- -----
+  829    41 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     20   9    1             @delay_ms1
+0     14   6    0             @const620
+0     29  13    2    89  2.5  GIAIMA7DOAN
+0     21   9    3             @DIV88
+0    134  60    1  1045  7.3  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               2
+    Statements              41
+    Comments                130
+    Volume (V)              1243
+    Difficulty (D)          9.5
+    Effort to implement (E) 11850
+    Time to implement (T)   11 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   9
+    Maintainability (MI)    84
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   218  1826  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

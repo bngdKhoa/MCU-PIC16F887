@@ -1,0 +1,123 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-021 TEMP
+022     lcd_init.i
+022     @PSTRINGCN7_644.P1
+022-025 @SFTOI.P2
+022-023 @PRINTF_LU_644.P3
+022     @PSTRINGC7_644.@SCRATCH1
+022     MAIN.@SCRATCH1
+023-026 lcd_init.LCD_INIT_STRING
+023     @PSTRINGC7_644.@SCRATCH2
+023     MAIN.@SCRATCH2
+023     @PSTRINGCN7_644.@SCRATCH1
+024-027 @DIVFF.P1
+024-025 @ITOF.P2
+024     @PSTRINGC7_644.@SCRATCH3
+024     @PSTRINGCN7_644.@SCRATCH2
+024     @PRINTF_LU_644.@SCRATCH1
+025     @PSTRINGC7_644.@SCRATCH4
+025     @PSTRINGCN7_644.@SCRATCH3
+025     @PRINTF_LU_644.@SCRATCH2
+026     @PSTRINGCN7_644.@SCRATCH4
+026     @PRINTF_LU_644.@SCRATCH3
+027     lcd_init.@SCRATCH1
+027     @PRINTF_LU_644.@SCRATCH4
+028-02B @DIVFF.P1
+028     @PRINTF_LU_644.@SCRATCH5
+029     @PRINTF_LU_644.@SCRATCH6
+02A     @PRINTF_LU_644.@SCRATCH7
+02B     lcd_putc.c
+02C     lcd_gotoxy.x
+02C     @delay_ms1.P1
+02C     @DIVFF.@SCRATCH1
+02D     lcd_gotoxy.y
+02D     @DIVFF.@SCRATCH2
+02E     lcd_gotoxy.address
+02E     @DIVFF.@SCRATCH3
+02F     lcd_gotoxy.@SCRATCH1
+02F     @DIVFF.@SCRATCH4
+030     lcd_send_byte.address
+030     @DIVFF.@SCRATCH5
+031     lcd_send_byte.n
+031     @DIVFF.@SCRATCH6
+032     lcd_read_byte.low
+032     lcd_send_byte.@SCRATCH1
+033     lcd_send_nibble.n
+033     lcd_read_byte.high
+034     lcd_read_nibble.n
+034     lcd_read_byte.@SCRATCH1
+035     lcd_read_nibble.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const658.call
+00000A  @const671.call
+000011  @const676.call
+00001B  @const677.call
+000025  @delay_ms1
+000039  lcd_send_nibble
+000069  lcd_read_nibble
+00009A  lcd_send_byte
+0000A2  lcd_read_byte
+0000F8  lcd_init
+00013E  lcd_gotoxy
+000150  lcd_putc
+00017C  @PSTRINGC7_644
+0001D2  HIENTHI_DONHIETDO
+0001DF  @ITOF
+0001FE  @DIVFF
+0002CA  @SFTOI
+0002EB  @PSTRINGCN7_644
+000344  @PRINTF_LU_644
+0003A9  MAIN
+0003A9  @cinit1
+0003BB  @cinit2
+03D8  LOOP
+
+Project Directory:
+    D:\Set up\VXL\Bai tap 09\
+
+Project Files:
+    CambiennhietdoLM35.c                                    [04-Nov-23 22:02  CRC=0547E859]
+    C:\Program Files (x86)\PICC\devices\16F887.H            [12-Nov-13 14:35  CRC=6CB1A611]
+    C:\Program Files (x86)\PICC\drivers\LCD.C               [19-Sep-13 15:38  CRC=D1A6378A]
+
+Source signature=1545FD7E
+
+Units:
+    CambiennhietdoLM35 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   CambiennhietdoLM35.xsym
+    Errors:      CambiennhietdoLM35.err
+    Ext Symbols: CambiennhietdoLM35.esym
+    INHX8:       CambiennhietdoLM35.hex
+    Symbols:     CambiennhietdoLM35.sym
+    List:        CambiennhietdoLM35.lst
+    Debug/COFF:  CambiennhietdoLM35.cof
+    Project:     CambiennhietdoLM35.ccspjt
+    Call Tree:   CambiennhietdoLM35.tre
+    Statistics:  CambiennhietdoLM35.STA

@@ -1,0 +1,273 @@
+CCS PCM C Compiler, Version 5.015, 5967               02-Oct-23 11:00
+
+               Filename:   D:\Set up\VXL\Btap05\demgiophutgiay.lst
+
+               ROM used:   186 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   19 (5%) at main() level
+                           21 (6%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   06C
+0003:  NOP
+.................... # include <demgiophutgiay.h> 
+.................... #include <16F877.h> 
+.................... //////////// Standard Header file for the PIC16F877 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F877 
+0004:  BCF    0A.0
+0005:  BCF    0A.1
+0006:  BCF    0A.2
+0007:  ADDWF  02,F
+0008:  RETLW  C0
+0009:  RETLW  F9
+000A:  RETLW  A4
+000B:  RETLW  B0
+000C:  RETLW  99
+000D:  RETLW  92
+000E:  RETLW  82
+000F:  RETLW  F8
+0010:  RETLW  80
+0011:  RETLW  90
+0012:  MOVF   2E,W
+0013:  CLRF   78
+0014:  SUBWF  2D,W
+0015:  BTFSC  03.0
+0016:  GOTO   01A
+0017:  MOVF   2D,W
+0018:  MOVWF  77
+0019:  GOTO   026
+001A:  CLRF   77
+001B:  MOVLW  08
+001C:  MOVWF  2F
+001D:  RLF    2D,F
+001E:  RLF    77,F
+001F:  MOVF   2E,W
+0020:  SUBWF  77,W
+0021:  BTFSC  03.0
+0022:  MOVWF  77
+0023:  RLF    78,F
+0024:  DECFSZ 2F,F
+0025:  GOTO   01D
+0026:  RETURN
+....................  
+.................... #list 
+....................  
+.................... #device ADC=16 
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES NOBROWNOUT            	//No brownout reset 
+.................... #FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+....................  
+.................... #use delay(crystal=20000000) 
+*
+0047:  MOVLW  2F
+0048:  MOVWF  04
+0049:  BCF    03.7
+004A:  MOVF   00,W
+004B:  BTFSC  03.2
+004C:  GOTO   05A
+004D:  MOVLW  06
+004E:  MOVWF  78
+004F:  CLRF   77
+0050:  DECFSZ 77,F
+0051:  GOTO   050
+0052:  DECFSZ 78,F
+0053:  GOTO   04F
+0054:  MOVLW  7B
+0055:  MOVWF  77
+0056:  DECFSZ 77,F
+0057:  GOTO   056
+0058:  DECFSZ 00,F
+0059:  GOTO   04D
+....................  
+....................  
+.................... UNSIGNED INT8 DLHT [8] = { 0xFF, 0xFF, 0xBF, 0xFF, 0xFF, 0xBF, 0xFF, 0xFF}; 
+*
+0077:  MOVLW  FF
+0078:  BCF    03.5
+0079:  MOVWF  20
+007A:  MOVWF  21
+007B:  MOVLW  BF
+007C:  MOVWF  22
+007D:  MOVLW  FF
+007E:  MOVWF  23
+007F:  MOVWF  24
+0080:  MOVLW  BF
+0081:  MOVWF  25
+0082:  MOVLW  FF
+0083:  MOVWF  26
+0084:  MOVWF  27
+.................... CONST UNSIGNED INT8 MA7DOAN [] = {0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xF8, 0x80, 0x90}; 
+.................... UNSIGNED INT8 QUET, GIO, PHUT, GIAY; 
+.................... VOID HIENTHI () 
+.................... { 
+....................    UNSIGNED INT8 I, Q; 
+....................    FOR (Q = 0; Q < 30; Q++) 
+*
+0027:  CLRF   2E
+0028:  MOVF   2E,W
+0029:  SUBLW  1D
+002A:  BTFSS  03.0
+002B:  GOTO   069
+....................    { 
+....................       QUET = 0xFE; 
+002C:  MOVLW  FE
+002D:  MOVWF  28
+....................       FOR (I = 0; I < 8; I++) 
+002E:  CLRF   2D
+002F:  MOVF   2D,W
+0030:  SUBLW  07
+0031:  BTFSS  03.0
+0032:  GOTO   067
+....................       { 
+....................          OUTPUT_D (QUET); 
+0033:  BSF    03.5
+0034:  CLRF   08
+0035:  BCF    03.5
+0036:  MOVF   28,W
+0037:  MOVWF  08
+....................          OUTPUT_C (DLHT[I]); 
+0038:  MOVLW  20
+0039:  ADDWF  2D,W
+003A:  MOVWF  04
+003B:  BCF    03.7
+003C:  MOVF   00,W
+003D:  MOVWF  2F
+003E:  MOVLW  00
+003F:  MOVWF  2C
+0040:  BSF    03.5
+0041:  CLRF   07
+0042:  BCF    03.5
+0043:  MOVF   2F,W
+0044:  MOVWF  07
+....................          DELAY_MS (4); 
+0045:  MOVLW  04
+0046:  MOVWF  2F
+....................          OUTPUT_C (0xFF); 
+*
+005A:  MOVLW  00
+005B:  MOVWF  2C
+005C:  BSF    03.5
+005D:  CLRF   07
+005E:  MOVLW  FF
+005F:  BCF    03.5
+0060:  MOVWF  07
+....................          QUET = (QUET << 1) + 1; 
+0061:  BCF    03.0
+0062:  RLF    28,W
+0063:  ADDLW  01
+0064:  MOVWF  28
+0065:  INCF   2D,F
+0066:  GOTO   02F
+....................       } 
+0067:  INCF   2E,F
+0068:  GOTO   028
+....................    } 
+0069:  BCF    0A.3
+006A:  BCF    0A.4
+006B:  GOTO   0B2 (RETURN)
+.................... } 
+.................... void main() 
+006C:  MOVF   03,W
+006D:  ANDLW  1F
+006E:  MOVWF  03
+006F:  MOVLW  FF
+0070:  MOVWF  2C
+0071:  BSF    03.5
+0072:  BSF    1F.0
+0073:  BSF    1F.1
+0074:  BSF    1F.2
+0075:  BCF    1F.3
+0076:  BCF    03.7
+.................... { 
+....................      SET_TRIS_C (0x00); 
+*
+0085:  MOVLW  00
+0086:  BSF    03.5
+0087:  MOVWF  07
+0088:  BCF    03.5
+0089:  MOVWF  2C
+....................      SET_TRIS_D (0x00); 
+008A:  BSF    03.5
+008B:  MOVWF  08
+....................      GIAY = 0; 
+008C:  BCF    03.5
+008D:  CLRF   2B
+....................      PHUT = 0; 
+008E:  CLRF   2A
+....................      GIO  = 0; 
+008F:  CLRF   29
+.................... while(TRUE) 
+....................    {  FOR (GIO = 0; GIO < 24; GIO ++) 
+0090:  CLRF   29
+0091:  MOVF   29,W
+0092:  SUBLW  17
+0093:  BTFSS  03.0
+0094:  GOTO   0B8
+....................       { 
+....................          FOR (PHUT = 0; PHUT < 60; PHUT ++) 
+0095:  CLRF   2A
+0096:  MOVF   2A,W
+0097:  SUBLW  3B
+0098:  BTFSS  03.0
+0099:  GOTO   0B6
+....................          { 
+....................             FOR (GIAY = 0; GIAY < 60; GIAY ++) 
+009A:  CLRF   2B
+009B:  MOVF   2B,W
+009C:  SUBLW  3B
+009D:  BTFSS  03.0
+009E:  GOTO   0B4
+....................             { 
+....................                DLHT [7] = MA7DOAN [GIAY % 10]; 
+009F:  MOVF   2B,W
+00A0:  MOVWF  2D
+00A1:  MOVLW  0A
+00A2:  MOVWF  2E
+00A3:  CALL   012
+00A4:  MOVF   77,W
+00A5:  CALL   004
+00A6:  MOVWF  78
+00A7:  MOVWF  27
+....................                DLHT [6] = MA7DOAN [GIAY / 10]; 
+00A8:  MOVF   2B,W
+00A9:  MOVWF  2D
+00AA:  MOVLW  0A
+00AB:  MOVWF  2E
+00AC:  CALL   012
+00AD:  MOVF   78,W
+00AE:  CALL   004
+00AF:  MOVWF  78
+00B0:  MOVWF  26
+....................                HIENTHI (); 
+00B1:  GOTO   027
+00B2:  INCF   2B,F
+00B3:  GOTO   09B
+....................             } 
+00B4:  INCF   2A,F
+00B5:  GOTO   096
+....................          
+....................          } 
+00B6:  INCF   29,F
+00B7:  GOTO   091
+....................       } 
+00B8:  GOTO   090
+....................    } 
+.................... } 
+00B9:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F32   HS NOWDT PUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

@@ -1,0 +1,100 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-027 dlht
+028-031 ma7doan
+032     i
+033     q
+034     n
+035     m
+036     k
+037     giay
+038     quet
+039     dem1
+03A     dem2
+03B     @TRIS_C
+03C     demlenxuongdongthoi.dem1
+03C     demgiay.giay
+03C-043 hienthimssv.mssv
+03C-050 chaychu_hello.hello
+03C     chaychu_cocacola.@SCRATCH1
+03D     demlenxuongdongthoi.dem2
+03D     @DIV88.P1
+03D     demgiay.@SCRATCH1
+03D     chaychu_cocacola.@SCRATCH2
+03E     @DIVS88.P1
+03E     @DIV88.P2
+03E     demlenxuongdongthoi.@SCRATCH1
+03E     chaychu_cocacola.@SCRATCH3
+03F     @DIVS88.P1
+03F     @DIV88.@SCRATCH1
+040     @DIVS88.@SCRATCH1
+041     @DIVS88.@SCRATCH2
+044     hienthimssv.@SCRATCH1
+051     @delay_ms1.P1
+051     hienthi.@SCRATCH1
+051     chaychu_hello.@SCRATCH1
+052     chaychu_hello.@SCRATCH2
+053     chaychu_hello.@SCRATCH3
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  cocacola.call
+000008  cocacola.data
+000010  @delay_ms1
+000024  hienthimssv
+000066  @DIV88
+00007B  hienthi
+0000AC  demgiay
+0000CD  @DIVS88
+0000F2  demlenxuongdongthoi
+00013A  chaychu_hello
+00017F  chaychu_cocacola
+0001B4  @cinit1
+0001B4  MAIN
+0001C8  @cinit2
+
+Project Directory:
+    D:\Set up\VXL\Btap05\
+
+Project Files:
+    btap5_vxl.c                                             [04-Oct-23 15:43  CRC=D8377EAE]
+    C:\Program Files (x86)\PICC\devices\16f887.h            [12-Nov-13 14:35  CRC=6CB1A611]
+
+Source signature=B19ACAD0
+
+Units:
+    btap5_vxl (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   btap5_vxl.xsym
+    Errors:      btap5_vxl.err
+    Ext Symbols: btap5_vxl.esym
+    INHX8:       btap5_vxl.hex
+    Symbols:     btap5_vxl.sym
+    List:        btap5_vxl.lst
+    Debug/COFF:  btap5_vxl.cof
+    Project:     btap5_vxl.ccspjt
+    Call Tree:   btap5_vxl.tre
+    Statistics:  btap5_vxl.STA

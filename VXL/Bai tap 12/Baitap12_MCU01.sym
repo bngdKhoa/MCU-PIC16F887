@@ -1,0 +1,83 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-021 ND
+022     TEMP
+023-024 @DIV1616.P1
+023-026 @SFTOI.P2
+023     HIENTHI_LED7DOAN.@SCRATCH1
+023     MAIN.@SCRATCH1
+024     @delay_ms1.P1
+024     HIENTHI_LED7DOAN.@SCRATCH2
+024     MAIN.@SCRATCH2
+025-026 @DIV1616.P1
+025-026 @ITOF.P2
+025-028 @DIVFF.P3
+025     HIENTHI_LED7DOAN.@SCRATCH3
+027     @DIV1616.@SCRATCH1
+029-02C @DIVFF.P1
+02D     @DIVFF.@SCRATCH1
+02E     @DIVFF.@SCRATCH2
+02F     @DIVFF.@SCRATCH3
+030     @DIVFF.@SCRATCH4
+031     @DIVFF.@SCRATCH5
+032     @DIVFF.@SCRATCH6
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  MA7DOAN.call
+000008  MA7DOAN.data
+000012  @delay_ms1
+000026  @ITOF
+000045  @DIVFF
+000111  @SFTOI
+000132  @DIV1616
+000157  HIENTHI_LED7DOAN
+000185  MAIN
+000185  @cinit1
+0001A4  @cinit2
+
+Project Directory:
+    D:\Set up\VXL\Bai tap 12\
+
+Project Files:
+    Baitap12_MCU01.c                                        [14-Nov-23 23:54  CRC=A8AD1A3B]
+    C:\Program Files (x86)\PICC\devices\16F887.H            [12-Nov-13 14:35  CRC=6CB1A611]
+
+Source signature=8210665D
+
+Units:
+    Baitap12_MCU01 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   Baitap12_MCU01.xsym
+    Errors:      Baitap12_MCU01.err
+    Ext Symbols: Baitap12_MCU01.esym
+    INHX8:       Baitap12_MCU01.hex
+    Symbols:     Baitap12_MCU01.sym
+    List:        Baitap12_MCU01.lst
+    Debug/COFF:  Baitap12_MCU01.cof
+    Project:     Baitap12_MCU01.ccspjt
+    Call Tree:   Baitap12_MCU01.tre
+    Statistics:  Baitap12_MCU01.STA

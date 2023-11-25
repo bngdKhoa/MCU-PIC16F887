@@ -1,0 +1,73 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-027 DLHT
+028     QUET
+029     GIO
+02A     PHUT
+02B     GIAY
+02C     @TRIS_C
+02D     HIENTHI.I
+02D     @DIV88.P1
+02D     MAIN.@SCRATCH1
+02E     @DIV88.P1
+02E     HIENTHI.Q
+02F     @delay_ms1.P1
+02F     HIENTHI.@SCRATCH1
+02F     @DIV88.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  MA7DOAN.call
+000008  MA7DOAN.data
+000012  @DIV88
+000027  HIENTHI
+000047  @delay_ms1
+00006C  MAIN
+00006C  @cinit1
+000076  @cinit2
+
+Project Directory:
+    D:\Set up\VXL\Btap05\
+
+Project Files:
+    demgiophutgiay.c                                        [02-Oct-23 11:00  CRC=EA691752]
+    demgiophutgiay.h                                        [02-Oct-23 10:04  CRC=64D0046D]
+    C:\Program Files (x86)\PICC\devices\16F877.h            [12-Nov-13 14:35  CRC=ADB5114D]
+
+Source signature=AAA33E59
+
+Units:
+    demgiophutgiay (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   demgiophutgiay.xsym
+    Errors:      demgiophutgiay.err
+    Ext Symbols: demgiophutgiay.esym
+    INHX8:       demgiophutgiay.hex
+    Symbols:     demgiophutgiay.sym
+    List:        demgiophutgiay.lst
+    Debug/COFF:  demgiophutgiay.cof
+    Project:     demgiophutgiay.ccspjt
+    Call Tree:   demgiophutgiay.tre
+    Statistics:  demgiophutgiay.STA

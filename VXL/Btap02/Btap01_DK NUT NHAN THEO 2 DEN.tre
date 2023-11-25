@@ -1,0 +1,5 @@
+ÀÄBtap01_DK NUT NHAN THEO 2 DEN
+   ÀÄMAIN  0/86  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÀÄ@delay_ms1  0/20  Ram=1

@@ -1,0 +1,39 @@
+ÀÄTest03
+   ÀÄMAIN  0/38  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄSANGDON  0/56  Ram=0
+      ³  ÃÄXUAT_16LED  0/17  Ram=0
+      ³  ÃÄXUAT_16LED  0/17  Ram=0
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄTATDON  0/75  Ram=0
+      ³  ÃÄXUAT_16LED  0/17  Ram=0
+      ³  ÃÄXUAT_16LED  0/17  Ram=0
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄSANGNGOAIVAO  0/39  Ram=1
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄTATNGOAIVAO  0/38  Ram=0
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄSANGNGOAIVAO  0/39  Ram=1
+      ³  ÀÄ*
+      ÃÄTATGIUARA  0/38  Ram=0
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄSANGNGOAIVAO  0/39  Ram=1
+      ³  ÀÄ*
+      ÃÄSANGGIUARA  0/41  Ram=1
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄXENKE  0/30  Ram=0
+      ³  ÃÄXUAT_16LED  0/17  Ram=0
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄXUAT_16LED  0/17  Ram=0
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄSANGDANTRAI  0/46  Ram=2
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄTATDANTRAI  0/35  Ram=2
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄSANGDANPHAI  0/43  Ram=2
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄTATDANPHAI  0/35  Ram=2
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÀÄCHOPTAT  0/24  Ram=0
+         ÃÄXUAT_16LED  0/17  Ram=0
+         ÀÄ@delay_ms1  0/20  Ram=1

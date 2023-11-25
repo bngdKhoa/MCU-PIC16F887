@@ -1,0 +1,19 @@
+[PROJECT]
+Target=Test03.hex
+Processor_Text=PIC16F887
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Test03.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[Test03.c]
+Type=4
+[mru-list]
+1=Test03.c
+[Opened Files]
+1=Test03.c
+2=
+[Units]
+Count=1
+1=Test03 (main)

@@ -1,0 +1,15 @@
+ÀÄNgat timer hien thi nhiet do
+   ÃÄMAIN  0/167  Ram=2
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄ@ITOF  0/31  Ram=2
+   ³  ÃÄ@DIVFF  0/204  Ram=14
+   ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ÃÄ@DIV1616  0/37  Ram=5
+   ³  ÃÄ@const620  0/14  Ram=0
+   ³  ÃÄ@DIV1616  0/37  Ram=5
+   ³  ÃÄ@const620  0/14  Ram=0
+   ³  ÀÄ@delay_ms1  0/20  Ram=1
+   ÀÄNGAT_TIMER1_QUETLED  0/67  Ram=0
+      ÀÄHIENTHI_8L7DQ  (Inline)  Ram=3
+         ÀÄ@delay_us1  (Inline)  Ram=1
